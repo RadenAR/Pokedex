@@ -32,6 +32,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ngl-91-AMp" kind="show" identifier="PokemonSegue" id="fFO-7j-LCt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -45,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="119.86607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Pokemon View Controller-->
         <scene sceneID="NwK-vl-XT6">
             <objects>
-                <viewController id="Ngl-91-AMp" sceneMemberID="viewController">
+                <viewController id="Ngl-91-AMp" customClass="PokemonViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HaB-SA-M2Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +74,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="G6f-Rx-mIf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="CBD-Xb-uWp"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="hTM-PO-J44" id="10j-mK-yn8"/>
+                        <outlet property="numberLabel" destination="Z1u-fS-JGA" id="6a5-VQ-4re"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuw-EA-eYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
